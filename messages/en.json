@@ -1,0 +1,88 @@
+{
+  "Nav": {
+    "SiteName": "Chambres Moulin Neuf",
+    "Tagline": "CIVRAY • CHARENTE",
+    "Spaces": "Spaces",
+    "Location": "Location",
+    "Contact": "Contact"
+  },
+  "Hero": {
+    "Title": "Chambres Moulin Neuf",
+    "Subtitle": "Séjour • Studio • Boutique • Galerie"
+  },
+  "Welcome": {
+    "Title": "Bienvenue à Chambres Moulin Neuf",
+    "Description": "Nestled in the heart of Civray, our historic property offers refined accommodations and creative spaces where French countryside charm meets contemporary comfort.",
+    "ChambresTitle": "Chambres",
+    "ChambresDesc": "Elegant guest rooms with period character and modern amenities",
+    "StudioTitle": "Studio",
+    "StudioDesc": "40m² independent space perfect for extended stays",
+    "GalerieTitle": "Galerie",
+    "GalerieDesc": "Creative workshop space for events and artistic endeavors",
+    "BoutiqueTitle": "Boutique",
+    "BoutiqueDesc": "Curated local products and artisanal treasures"
+  },
+  "Spaces": {
+    "Title": "Our Spaces",
+    "Description": "Discover the unique character of each accommodation",
+    "ChambreTitle": "Chambre du Moulin",
+    "ChambreDesc": "Historic mill room with exposed stone walls and countryside views",
+    "ChambrePrice": "From €85/night",
+    "StudioTitle": "Studio Indépendant",
+    "StudioDesc": "Self-contained 40m² space with kitchenette and private entrance",
+    "StudioPrice": "From €120/night",
+    "EspaceTitle": "Espace Créatif",
+    "EspaceDesc": "Versatile gallery and workshop space for events and creativity",
+    "EspacePrice": "Available for hire",
+    "ViewAllSpaces": "View All Spaces"
+  },
+  "Location": {
+    "Title": "Discover Civray & Charente",
+    "Description": "Located in the picturesque town of Civray, our chambre d'hôtes serves as the perfect base for exploring the Charente region's rich history, local markets, and scenic countryside.",
+    "Feature1": "Historic Civray bridge - 2 minutes walk",
+    "Feature2": "Local restaurants & cafés nearby",
+    "Feature3": "Weekly market every Saturday",
+    "ExploreButton": "Explore Location",
+    "ImageAlt": "Civray aerial view"
+  },
+  "Contact": {
+    "Title": "Get In Touch",
+    "Description": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "Name": "Name",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Message": "Message",
+    "NamePlaceholder": "Your name",
+    "EmailPlaceholder": "your.email@example.com",
+    "PhonePlaceholder": "+33 5 49 87 XX XX",
+    "MessagePlaceholder": "Your message here...",
+    "SendMessage": "Send Message",
+    "Sending": "Sending...",
+    "SuccessMessage": "Message sent successfully!",
+    "Required": "*"
+  },
+  "Footer": {
+    "SiteName": "Chambres Moulin Neuf",
+    "Tagline": "CIVRAY • CHARENTE",
+    "Description": "Authentic French hospitality in the heart of Charente countryside.",
+    "ContactTitle": "Contact",
+    "Address": "12 Rue du Moulin Neuf\n86400 Civray, France",
+    "Phone": "+33 5 49 87 XX XX",
+    "Email": "info@chambres-moulinneuf.fr",
+    "QuickLinksTitle": "Quick Links",
+    "OurRooms": "Our Rooms",
+    "StudioRental": "Studio Rental",
+    "GallerySpace": "Gallery Space",
+    "LocalShop": "Local Shop",
+    "BookDirect": "Book Direct",
+    "FollowUsTitle": "Follow Us",
+    "BookingNote": "Book directly for best rates\nAlso available on Booking.com",
+    "Copyright": "All rights reserved.",
+    "PrivacyPolicy": "Privacy Policy",
+    "Terms": "Terms"
+  },
+  "GoogleMap": {
+    "NotConfigured": "Map location not configured",
+    "Title": "Google Maps Location"
+  }
+}

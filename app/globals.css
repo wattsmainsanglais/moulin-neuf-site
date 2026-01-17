@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --background: #E8E4DC;
+  --foreground: #333333;
+  /* Adjusted greens to match CMN brand card */
+  --sage-green: #5A7A62;
+  --forest-green: #3D5C4A;
+  --cream: #E8E4DC;
+  --white: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sage: var(--sage-green);
+  --color-forest: var(--forest-green);
+  --color-cream: var(--cream);
+  --color-primary: var(--sage-green);
+  --color-accent: var(--forest-green);
+  --font-sans: var(--font-lato);
+  --font-serif: var(--font-playfair);
+
+  /* Add custom breakpoint */
+  --breakpoint-lg: 1025px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lato), 'Lato', -apple-system, Roboto, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings use Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile menu animations */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@theme {
+  --animate-slide-down: slide-down 0.2s ease-out;
+}
+
+/* AwattsdevFooter gradient hover effect */
+.awattsdev-link {
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #5A7A62; /* sage green - matched to brand */
+
+  color: transparent;
+  font-size: 1.2em;
+  font-weight: 500;
+
+  padding-block: var(--b);
+  background:
+    linear-gradient(var(--c) 50%, #5A7A62d2 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+
+.awattsdev-link:hover {
+  cursor: pointer;
+  --_p: 100%;
+  --_s: 0.3s;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  background: #5A7A62;
+  color: #E8E4DC;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-lato), 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #4d6853;
+}

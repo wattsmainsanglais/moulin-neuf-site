@@ -1,0 +1,88 @@
+{
+  "Nav": {
+    "SiteName": "Chambres Moulin Neuf",
+    "Tagline": "CIVRAY • CHARENTE",
+    "Spaces": "Espaces",
+    "Location": "Situation",
+    "Contact": "Contact"
+  },
+  "Hero": {
+    "Title": "Chambres Moulin Neuf",
+    "Subtitle": "Séjour • Studio • Boutique • Galerie"
+  },
+  "Welcome": {
+    "Title": "Bienvenue à Chambres Moulin Neuf",
+    "Description": "Niché au cœur de Civray, notre propriété historique offre des hébergements raffinés et des espaces créatifs où le charme de la campagne française rencontre le confort contemporain.",
+    "ChambresTitle": "Chambres",
+    "ChambresDesc": "Chambres d'hôtes élégantes avec caractère d'époque et équipements modernes",
+    "StudioTitle": "Studio",
+    "StudioDesc": "Espace indépendant de 40m² parfait pour les séjours prolongés",
+    "GalerieTitle": "Galerie",
+    "GalerieDesc": "Espace créatif pour événements et activités artistiques",
+    "BoutiqueTitle": "Boutique",
+    "BoutiqueDesc": "Produits locaux et trésors artisanaux soigneusement sélectionnés"
+  },
+  "Spaces": {
+    "Title": "Nos Espaces",
+    "Description": "Découvrez le caractère unique de chaque hébergement",
+    "ChambreTitle": "Chambre du Moulin",
+    "ChambreDesc": "Chambre historique avec murs en pierre apparente et vue sur la campagne",
+    "ChambrePrice": "À partir de 85€/nuit",
+    "StudioTitle": "Studio Indépendant",
+    "StudioDesc": "Espace autonome de 40m² avec kitchenette et entrée privée",
+    "StudioPrice": "À partir de 120€/nuit",
+    "EspaceTitle": "Espace Créatif",
+    "EspaceDesc": "Galerie et atelier polyvalent pour événements et créativité",
+    "EspacePrice": "Disponible à la location",
+    "ViewAllSpaces": "Voir Tous les Espaces"
+  },
+  "Location": {
+    "Title": "Découvrez Civray & la Charente",
+    "Description": "Situé dans la pittoresque ville de Civray, notre chambre d'hôtes est le point de départ idéal pour explorer la riche histoire de la région Charente, ses marchés locaux et ses paysages champêtres.",
+    "Feature1": "Pont historique de Civray - 2 minutes à pied",
+    "Feature2": "Restaurants et cafés locaux à proximité",
+    "Feature3": "Marché hebdomadaire chaque samedi",
+    "ExploreButton": "Explorer la Région",
+    "ImageAlt": "Vue aérienne de Civray"
+  },
+  "Contact": {
+    "Title": "Nous Contacter",
+    "Description": "Nous serions ravis de vous entendre. Envoyez-nous un message et nous vous répondrons dès que possible.",
+    "Name": "Nom",
+    "Email": "E-mail",
+    "Phone": "Téléphone",
+    "Message": "Message",
+    "NamePlaceholder": "Votre nom",
+    "EmailPlaceholder": "votre.email@exemple.com",
+    "PhonePlaceholder": "+33 5 49 87 XX XX",
+    "MessagePlaceholder": "Votre message ici...",
+    "SendMessage": "Envoyer le Message",
+    "Sending": "Envoi en cours...",
+    "SuccessMessage": "Message envoyé avec succès!",
+    "Required": "*"
+  },
+  "Footer": {
+    "SiteName": "Chambres Moulin Neuf",
+    "Tagline": "CIVRAY • CHARENTE",
+    "Description": "L'hospitalité française authentique au cœur de la campagne charentaise.",
+    "ContactTitle": "Contact",
+    "Address": "12 Rue du Moulin Neuf\n86400 Civray, France",
+    "Phone": "+33 5 49 87 XX XX",
+    "Email": "info@chambres-moulinneuf.fr",
+    "QuickLinksTitle": "Liens Rapides",
+    "OurRooms": "Nos Chambres",
+    "StudioRental": "Location Studio",
+    "GallerySpace": "Espace Galerie",
+    "LocalShop": "Boutique Locale",
+    "BookDirect": "Réserver Directement",
+    "FollowUsTitle": "Suivez-nous",
+    "BookingNote": "Réservez directement pour les meilleurs tarifs\nÉgalement disponible sur Booking.com",
+    "Copyright": "Tous droits réservés.",
+    "PrivacyPolicy": "Politique de Confidentialité",
+    "Terms": "Conditions"
+  },
+  "GoogleMap": {
+    "NotConfigured": "Emplacement de la carte non configuré",
+    "Title": "Emplacement Google Maps"
+  }
+}
