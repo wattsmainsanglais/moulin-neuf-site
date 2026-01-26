@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 // Placeholder images - replace with actual property images
 const spaces = [
@@ -48,7 +49,7 @@ export default function Spaces() {
             <div key={index} className="flex flex-col">
               {/* Image */}
               <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
-                <img
+                <Image
                   src={space.image}
                   alt={t(space.titleKey)}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

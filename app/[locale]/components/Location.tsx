@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { MapPin, UtensilsCrossed, ShoppingBag } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   { icon: MapPin, textKey: 'Feature1' },
@@ -48,7 +49,7 @@ export default function Location() {
 
           {/* Image */}
           <div className="w-full h-96 rounded-lg overflow-hidden">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80"
               alt={t('ImageAlt')}
               className="w-full h-full object-cover"
