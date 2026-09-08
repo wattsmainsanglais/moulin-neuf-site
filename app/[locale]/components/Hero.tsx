@@ -17,10 +17,10 @@ export default function Hero() {
         />
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-70 animate-bounce">
         <ChevronDown className="w-8 h-8 text-forest" />
-      </div>
+      </div>*/}
     </section>
   );
 }
