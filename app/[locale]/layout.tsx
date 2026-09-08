@@ -4,6 +4,9 @@ import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
+import {routing} from '../../src/i18n/routing';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -29,8 +32,6 @@ export type LayoutProps = {
   }>;
 };
 
-const locales = ['en', 'fr'];
-
 export default async function RootLayout({
   children,
   params
@@ -38,7 +39,7 @@ export default async function RootLayout({
   const {locale} = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -52,7 +53,9 @@ export default async function RootLayout({
         className={`${playfair.variable} ${lato.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+          <NavBar locale={locale} />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

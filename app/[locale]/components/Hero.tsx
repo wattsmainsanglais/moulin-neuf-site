@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full h-[600px] md:h-[700px] bg-[#2D4A3E] py-8 md:py-12">
+    <section id="home" className="w-full h-[600px] md:h-[700px] bg-white py-8 md:py-12">
       {/* Hero Image - Client's brand card */}
       <div className="relative w-full h-full">
         <Image

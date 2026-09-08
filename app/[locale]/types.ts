@@ -6,8 +6,24 @@ export interface Screenshot {
 }
 
 export interface ContactFormData {
-  name: string;
+  firstName: string;
+  surname: string;
+  addressLine1: string;
+  addressLine2: string;
+  postCode: string;
+  city: string;
+  country: string;
   email: string;
-  tel: string;
-  message: string;
+  mobile: string;
+  arrivalDate: string;
+  travellingFrom: string;
+  preferredCheckIn: string;
+  departureDate: string;
+  travellingTo: string;
+  numberOfRooms: string;
+  numberOfGuests: string;
+  travellingWithPets: string;
+  petsSpecify: string;
+  furtherInfo: string;
+  termsAccepted: string;
 }

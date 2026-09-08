@@ -1,45 +1,28 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Coffee, Accessibility, PawPrint, Car, Bike, TreePine } from 'lucide-react';
 
-// Feature icons as SVG components
-function BedIcon() {
-  return (
-    <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.5 1.5C2.32969 1.5 3 2.17031 3 3V15H13.5V7.5C13.5 6.67031 14.1703 6 15 6H25.5C27.9844 6 30 8.01562 30 10.5V21C30 21.8297 29.3297 22.5 28.5 22.5C27.6703 22.5 27 21.8297 27 21V19.5H16.5H15H3V21C3 21.8297 2.32969 22.5 1.5 22.5C0.670312 22.5 0 21.8297 0 21V3C0 2.17031 0.670312 1.5 1.5 1.5ZM8.25 6C9.24456 6 10.1984 6.39509 10.9017 7.09835C11.6049 7.80161 12 8.75544 12 9.75C12 10.7446 11.6049 11.6984 10.9017 12.4017C10.1984 13.1049 9.24456 13.5 8.25 13.5C7.25544 13.5 6.30161 13.1049 5.59835 12.4017C4.89509 11.6984 4.5 10.7446 4.5 9.75C4.5 8.75544 4.89509 7.80161 5.59835 7.09835C6.30161 6.39509 7.25544 6 8.25 6Z" fill="#5B7355"/>
-    </svg>
-  );
-}
+const amenities = [
+  { icon: Coffee, titleKey: 'BreakfastTitle', descKey: 'BreakfastPara', extraKey: 'MealsPara' },
+  { icon: Accessibility, titleKey: 'AccessTitle', descKey: 'AccessPara' },
+  { icon: PawPrint, titleKey: 'PetsTitle', descKey: 'PetsPara' },
+  { icon: Car, titleKey: 'ParkingTitle', descKey: 'ParkingPara' },
+  { icon: Bike, titleKey: 'BikesTitle', descKey: 'BikesPara' },
+  { icon: TreePine, titleKey: 'GardenTitle', descKey: 'GardenPara' },
+];
 
-function HouseIcon() {
-  return (
-    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M26.9906 11.9766C26.9906 12.8203 26.2875 13.4813 25.4906 13.4813H23.9906L24.0234 20.9906C24.0234 21.1172 24.0141 21.2437 24 21.3703V22.125C24 23.1609 23.1609 24 22.125 24H21.375C21.3234 24 21.2719 24 21.2203 23.9953C21.1547 24 21.0891 24 21.0234 24H19.5H18.375C17.3391 24 16.5 23.1609 16.5 22.125V21V18C16.5 17.1703 15.8297 16.5 15 16.5H12C11.1703 16.5 10.5 17.1703 10.5 18V21V22.125C10.5 23.1609 9.66094 24 8.625 24H7.5H6.00469C5.93438 24 5.86406 23.9953 5.79375 23.9906C5.7375 23.9953 5.68125 24 5.625 24H4.875C3.83906 24 3 23.1609 3 22.125V16.875C3 16.8328 3 16.7859 3.00469 16.7438V13.4813H1.5C0.65625 13.4813 0 12.825 0 11.9766C0 11.5547 0.140625 11.1797 0.46875 10.8516L12.4875 0.375C12.8156 0.046875 13.1906 0 13.5187 0C13.8469 0 14.2219 0.09375 14.5031 0.328125L26.475 10.8516C26.85 11.1797 27.0375 11.5547 26.9906 11.9766Z" fill="#5B7355"/>
-    </svg>
-  );
-}
-
-function PaletteIcon() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M24 12C24 12.0422 24 12.0844 24 12.1266C23.9812 13.8375 22.425 15 20.7141 15H16.125C14.8828 15 13.875 16.0078 13.875 17.25C13.875 17.4094 13.8937 17.5641 13.9219 17.7141C14.0203 18.1922 14.2266 18.6516 14.4281 19.1156C14.7141 19.7625 14.9953 20.4047 14.9953 21.0844C14.9953 22.575 13.9828 23.9297 12.4922 23.9906C12.3281 23.9953 12.1641 24 11.9953 24C5.37187 24 0 18.6281 0 12C0 5.37188 5.37188 0 12 0C18.6281 0 24 5.37188 24 12ZM6 13.5C6 13.1022 5.84196 12.7206 5.56066 12.4393C5.27936 12.158 4.89782 12 4.5 12C4.10218 12 3.72064 12.158 3.43934 12.4393C3.15804 12.7206 3 13.1022 3 13.5C3 13.8978 3.15804 14.2794 3.43934 14.5607C3.72064 14.842 4.10218 15 4.5 15C4.89782 15 5.27936 14.842 5.56066 14.5607C5.84196 14.2794 6 13.8978 6 13.5ZM6 9C6.39782 9 6.77936 8.84196 7.06066 8.56066C7.34196 8.27936 7.5 7.89782 7.5 7.5C7.5 7.10218 7.34196 6.72064 7.06066 6.43934C6.77936 6.15804 6.39782 6 6 6C5.60218 6 5.22064 6.15804 4.93934 6.43934C4.65804 6.72064 4.5 7.10218 4.5 7.5C4.5 7.89782 4.65804 8.27936 4.93934 8.56066C5.22064 8.84196 5.60218 9 6 9ZM13.5 4.5C13.5 4.10218 13.342 3.72064 13.0607 3.43934C12.7794 3.15804 12.3978 3 12 3C11.6022 3 11.2206 3.15804 10.9393 3.43934C10.658 3.72064 10.5 4.10218 10.5 4.5C10.5 4.89782 10.658 5.27936 10.9393 5.56066C11.2206 5.84196 11.6022 6 12 6C12.3978 6 12.7794 5.84196 13.0607 5.56066C13.342 5.27936 13.5 4.89782 13.5 4.5ZM18 9C18.3978 9 18.7794 8.84196 19.0607 8.56066C19.342 8.27936 19.5 7.89782 19.5 7.5C19.5 7.10218 19.342 6.72064 19.0607 6.43934C18.7794 6.15804 18.3978 6 18 6C17.6022 6 17.2206 6.15804 16.9393 6.43934C16.658 6.72064 16.5 7.10218 16.5 7.5C16.5 7.89782 16.658 8.27936 16.9393 8.56066C17.2206 8.84196 17.6022 9 18 9Z" fill="#5B7355"/>
-    </svg>
-  );
-}
-
-function ShopIcon() {
-  return (
-    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.8734 1.64529C12.1594 1.09216 11.9438 0.412477 11.3953 0.126539C10.8469 -0.159398 10.1625 0.0562267 9.87656 0.604664L5.5125 8.99998H1.5C0.670312 8.99998 0 9.67029 0 10.5C0 11.3297 0.670312 12 1.5 12L3.93281 21.7265C4.26563 23.0625 5.46563 24 6.84375 24H20.1562C21.5344 24 22.7344 23.0625 23.0672 21.7265L25.5 12C26.3297 12 27 11.3297 27 10.5C27 9.67029 26.3297 8.99998 25.5 8.99998H21.4875L17.1234 0.604664C16.8375 0.0562267 16.1578 -0.159398 15.6047 0.126539C15.0516 0.412477 14.8406 1.09216 15.1266 1.64529L18.9516 8.99998H8.04844L11.8734 1.64529ZM9 14.25V18.75C9 19.1625 8.6625 19.5 8.25 19.5C7.8375 19.5 7.5 19.1625 7.5 18.75V14.25C7.5 13.8375 7.8375 13.5 8.25 13.5C8.6625 13.5 9 13.8375 9 14.25ZM13.5 13.5C13.9125 13.5 14.25 13.8375 14.25 14.25V18.75C14.25 19.1625 13.9125 19.5 13.5 19.5C13.0875 19.5 12.75 19.1625 12.75 18.75V14.25C12.75 13.8375 13.0875 13.5 13.5 13.5ZM19.5 14.25V18.75C19.5 19.1625 19.1625 19.5 18.75 19.5C18.3375 19.5 18 19.1625 18 18.75V14.25C18 13.8375 18.3375 13.5 18.75 13.5C19.1625 13.5 19.5 13.8375 19.5 14.25Z" fill="#5B7355"/>
-    </svg>
-  );
-}
-
-const features = [
-  { icon: BedIcon, titleKey: 'ChambresTitle', descKey: 'ChambresDesc' },
-  { icon: HouseIcon, titleKey: 'StudioTitle', descKey: 'StudioDesc' },
-  { icon: PaletteIcon, titleKey: 'GalerieTitle', descKey: 'GalerieDesc' },
-  { icon: ShopIcon, titleKey: 'BoutiqueTitle', descKey: 'BoutiqueDesc' },
+const galleryImages = [
+  { src: '/images/CMN-maison-et-jardin.jpg', alt: 'Chambres Moulin Neuf - house and garden' },
+  { src: '/images/CMN-facade-simca1.jpg', alt: 'Chambres Moulin Neuf - facade' },
+  { src: '/images/CMN-facade-simca2.jpg', alt: 'Chambres Moulin Neuf - facade' },
+  { src: '/images/CMN-escalier1.jpg', alt: 'Chambres Moulin Neuf - staircase' },
+  { src: '/images/CMN-escalier2.jpg', alt: 'Chambres Moulin Neuf - staircase' },
+  { src: '/images/CMN-cuisine1.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
+  { src: '/images/CMN-cuisine2.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
+  { src: '/images/CMN-jardin-pagoda-charante.jpg', alt: 'Chambres Moulin Neuf - garden pagoda' },
+  { src: '/images/CMN-charante1.jpg', alt: 'The Charente river' },
 ];
 
 export default function Welcome() {
@@ -48,34 +31,76 @@ export default function Welcome() {
   return (
     <section className="bg-cream py-20 px-6 md:px-10 lg:px-36">
       <div className="max-w-[1152px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-forest leading-tight tracking-tight mb-6">
-            {t('Title')}
-          </h2>
-          <p className="text-lg text-gray-800/80 leading-relaxed tracking-tight max-w-4xl mx-auto">
-            {t('Description')}
+        {/* Intro */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold text-forest leading-tight tracking-tight mb-6">
+              {t('Title')}
+            </h2>
+            <div className="space-y-4 text-lg text-ink/80 leading-relaxed tracking-tight">
+              <p>{t('IntroPara1')}</p>
+              <p>{t('IntroPara2')}</p>
+              <p>{t('IntroPara3')}</p>
+            </div>
+          </div>
+          <div className="w-full h-96 rounded-lg overflow-hidden relative">
+            <Image
+              src="/images/CMN-maison-et-jardin.jpg"
+              alt="Chambres Moulin Neuf - house and garden"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Facilities */}
+        <div className="text-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-semibold text-forest leading-tight tracking-tight mb-4">
+            {t('FacilitiesTitle')}
+          </h3>
+          <p className="text-base text-ink/70 leading-relaxed tracking-tight max-w-3xl mx-auto">
+            {t('AvailabilityPara')}
           </p>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 mb-16">
+          {amenities.map((item, index) => {
+            const Icon = item.icon;
             return (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon />
+              <div key={index} className="flex gap-4">
+                <div className="w-12 h-12 bg-sage/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-forest leading-7 tracking-tight mb-2">
-                  {t(feature.titleKey)}
-                </h3>
-                <p className="text-sm text-gray-800/70 leading-relaxed tracking-tight">
-                  {t(feature.descKey)}
-                </p>
+                <div>
+                  <h4 className="text-lg font-semibold text-forest leading-7 tracking-tight mb-1">
+                    {t(item.titleKey)}
+                  </h4>
+                  <p className="text-sm text-ink/70 leading-relaxed tracking-tight">
+                    {t(item.descKey)}
+                  </p>
+                  {item.extraKey && (
+                    <p className="text-sm text-ink/70 leading-relaxed tracking-tight mt-2">
+                      {t(item.extraKey)}
+                    </p>
+                  )}
+                </div>
               </div>
             );
           })}
+        </div>
+
+        {/* Character photo strip */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {galleryImages.map((img, index) => (
+            <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

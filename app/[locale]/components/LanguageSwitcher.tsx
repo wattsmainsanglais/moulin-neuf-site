@@ -14,7 +14,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
       <Link
         href={`/en${currentRoute}`}
         className={`text-sm font-medium tracking-tight transition-colors ${
-          locale === 'en' ? 'text-sage' : 'text-gray-800/60 hover:text-sage'
+          locale === 'en' ? 'text-sage' : 'text-ink/60 hover:text-sage'
         }`}
       >
         EN
@@ -23,7 +23,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
       <Link
         href={`/fr${currentRoute}`}
         className={`text-sm font-medium tracking-tight transition-colors ${
-          locale === 'fr' ? 'text-sage' : 'text-gray-800/60 hover:text-sage'
+          locale === 'fr' ? 'text-sage' : 'text-ink/60 hover:text-sage'
         }`}
       >
         FR

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link';
+import { Link } from '../../../src/i18n/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -20,9 +20,9 @@ export default function NavBar({ locale }: { locale: string }) {
   const t = useTranslations('Nav');
 
   const navItems = [
-    { title: t('Spaces'), href: '#spaces' },
-    { title: t('Location'), href: '#location' },
-    { title: t('Contact'), href: '#contact' },
+    { title: t('Spaces'), href: { pathname: '/', hash: 'spaces' } },
+    { title: t('Location'), href: '/location' },
+    { title: t('Contact'), href: '/contact' },
   ];
 
   const handleLinkClick = () => {
@@ -34,7 +34,7 @@ export default function NavBar({ locale }: { locale: string }) {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-20">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
-          <Link href={`/${locale}`} className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="w-12 h-12 bg-sage rounded-full flex items-center justify-center">
               <BridgeIcon className="w-5 h-[18px] text-cream" />
             </div>
@@ -54,7 +54,7 @@ export default function NavBar({ locale }: { locale: string }) {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-base font-medium text-gray-800 hover:text-sage transition-colors tracking-tight"
+                className="text-base font-medium text-ink hover:text-sage transition-colors tracking-tight"
               >
                 {item.title}
               </Link>
@@ -95,7 +95,7 @@ export default function NavBar({ locale }: { locale: string }) {
                   key={item.title}
                   href={item.href}
                   onClick={handleLinkClick}
-                  className="block px-6 py-4 border-b border-sage/10 hover:bg-sage/10 text-gray-800 hover:text-sage transition-all font-medium"
+                  className="block px-6 py-4 border-b border-sage/10 hover:bg-sage/10 text-ink hover:text-sage transition-all font-medium"
                 >
                   {item.title}
                 </Link>

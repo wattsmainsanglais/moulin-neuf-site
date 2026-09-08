@@ -28,8 +28,8 @@ export default function GoogleMap({
 
   if (!mapUrl) {
     return (
-      <div className={`bg-gray-100 rounded-lg flex items-center justify-center ${className}`} style={{ height }}>
-        <p className="text-gray-500">{t('NotConfigured')}</p>
+      <div className={`bg-ink/5 rounded-lg flex items-center justify-center ${className}`} style={{ height }}>
+        <p className="text-ink/50">{t('NotConfigured')}</p>
       </div>
     );
   }

@@ -5,17 +5,34 @@
   --foreground: #333333;
   /* Adjusted greens to match CMN brand card */
   --sage-green: #5A7A62;
+  --sage-green-hover: #4D6853;
   --forest-green: #3D5C4A;
+  --forest-green-dark: #2D4A3E;
   --cream: #E8E4DC;
   --white: #FFFFFF;
+  --black: #000000;
+  --ink: #1F2937;
+  --success-bg: #F0FDF4;
+  --success-text: #166534;
+  --error-bg: #FEF2F2;
+  --error-text: #991B1B;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sage: var(--sage-green);
+  --color-sage-hover: var(--sage-green-hover);
   --color-forest: var(--forest-green);
+  --color-forest-dark: var(--forest-green-dark);
   --color-cream: var(--cream);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-ink: var(--ink);
+  --color-success-bg: var(--success-bg);
+  --color-success-text: var(--success-text);
+  --color-error-bg: var(--error-bg);
+  --color-error-text: var(--error-text);
   --color-primary: var(--sage-green);
   --color-accent: var(--forest-green);
   --font-sans: var(--font-lato);
@@ -61,7 +78,7 @@ html {
 /* AwattsdevFooter gradient hover effect */
 .awattsdev-link {
   --b: 0.1em;   /* the thickness of the line */
-  --c: #5A7A62; /* sage green - matched to brand */
+  --c: var(--sage-green); /* matched to brand */
 
   color: transparent;
   font-size: 1.2em;
@@ -69,7 +86,7 @@ html {
 
   padding-block: var(--b);
   background:
-    linear-gradient(var(--c) 50%, #5A7A62d2 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 50%, color-mix(in srgb, var(--c) 82%, transparent) 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
@@ -89,8 +106,8 @@ html {
   padding: 14px 24px;
   justify-content: center;
   align-items: center;
-  background: #5A7A62;
-  color: #E8E4DC;
+  background: var(--sage-green);
+  color: var(--cream);
   border: none;
   border-radius: 8px;
   font-family: var(--font-lato), 'Lato', sans-serif;
@@ -104,5 +121,5 @@ html {
 }
 
 .btn-primary:hover {
-  background: #4d6853;
+  background: var(--sage-green-hover);
 }

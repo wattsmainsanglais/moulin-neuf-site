@@ -1,29 +1,35 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '../../../src/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
-// Placeholder images - replace with actual property images
-const spaces = [
+const rooms = [
   {
     titleKey: 'ChambreTitle',
     descKey: 'ChambreDesc',
     priceKey: 'ChambrePrice',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80',
+    images: [
+      '/images/CMN-moulin-bed1.jpg',
+      '/images/CMN-moulin-bed2.jpg',
+      '/images/CMN-moulin-bed3.jpg',
+      '/images/CMN-moulin-bed4.jpg',
+      '/images/CMN-moulin-bain1.jpg',
+    ],
   },
   {
-    titleKey: 'StudioTitle',
-    descKey: 'StudioDesc',
-    priceKey: 'StudioPrice',
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80',
-  },
-  {
-    titleKey: 'EspaceTitle',
-    descKey: 'EspaceDesc',
-    priceKey: 'EspacePrice',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    titleKey: 'PontTitle',
+    descKey: 'PontDesc',
+    priceKey: 'PontPrice',
+    images: [
+      '/images/CMN-pont-bed1.jpg',
+      '/images/CMN-pont-bed2.jpg',
+      '/images/CMN-pont-bed3.jpg',
+      '/images/CMN-pont-bed4.jpg',
+      '/images/CMN-pont-bain1.jpg',
+      '/images/CMN-pont-vista.jpg',
+    ],
   },
 ];
 
@@ -38,38 +44,51 @@ export default function Spaces() {
           <h2 className="text-3xl md:text-4xl font-semibold text-forest leading-tight tracking-tight mb-6">
             {t('Title')}
           </h2>
-          <p className="text-lg text-gray-800/70 leading-7 tracking-tight">
+          <p className="text-lg text-ink/70 leading-7 tracking-tight">
             {t('Description')}
           </p>
         </div>
 
-        {/* Spaces Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {spaces.map((space, index) => (
+        {/* Rooms */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+          {rooms.map((room, index) => (
             <div key={index} className="flex flex-col">
-              {/* Image */}
-              <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
-                <Image
-                  src={space.image}
-                  alt={t(space.titleKey)}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+              {/* Photo grid */}
+              <div className="grid grid-cols-3 gap-2 mb-6">
+                <div className="col-span-2 row-span-2 relative aspect-square rounded-lg overflow-hidden">
+                  <Image
+                    src={room.images[0]}
+                    alt={t(room.titleKey)}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                {room.images.slice(1).map((src, i) => (
+                  <div key={i} className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={t(room.titleKey)}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Content */}
               <h3 className="text-xl font-semibold text-forest leading-7 tracking-tight mb-2">
-                {t(space.titleKey)}
+                {t(room.titleKey)}
               </h3>
-              <p className="text-sm text-gray-800/70 leading-5 tracking-tight mb-6 flex-grow">
-                {t(space.descKey)}
+              <p className="text-sm text-ink/70 leading-5 tracking-tight mb-6 flex-grow">
+                {t(room.descKey)}
               </p>
 
               {/* Price Link */}
               <Link
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-3 text-sm text-sage hover:text-forest transition-colors tracking-tight"
               >
-                {t(space.priceKey)}
+                {t(room.priceKey)}
                 <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
@@ -78,7 +97,7 @@ export default function Spaces() {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Link href="#contact" className="btn-primary">
+          <Link href="/contact" className="btn-primary">
             {t('ViewAllSpaces')}
           </Link>
         </div>
