@@ -112,14 +112,18 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4 mb-6">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61594124285757"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 bg-cream/20 text-cream rounded-full flex items-center justify-center hover:bg-cream/30 transition-colors"
                 aria-label="Facebook"
               >
                 <FacebookIcon />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/chambres86400/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 bg-cream/20 text-cream rounded-full flex items-center justify-center hover:bg-cream/30 transition-colors"
                 aria-label="Instagram"
               >

@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../../src/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import PhotoLightbox, { type LightboxImage } from './PhotoLightbox';
 
 const rooms = [
   {
@@ -35,6 +37,11 @@ const rooms = [
 
 export default function Spaces() {
   const t = useTranslations('Spaces');
+  const [lightbox, setLightbox] = useState<{ images: LightboxImage[]; index: number } | null>(null);
+
+  const openLightbox = (roomImages: string[], alt: string, index: number) => {
+    setLightbox({ images: roomImages.map((src) => ({ src, alt })), index });
+  };
 
   return (
     <section id="spaces" className="bg-white py-20 px-6 md:px-10 lg:px-36">
@@ -55,23 +62,32 @@ export default function Spaces() {
             <div key={index} className="flex flex-col">
               {/* Photo grid */}
               <div className="grid grid-cols-3 gap-2 mb-6">
-                <div className="col-span-2 row-span-2 relative aspect-square rounded-lg overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => openLightbox(room.images, t(room.titleKey), 0)}
+                  className="col-span-2 row-span-2 relative aspect-square rounded-lg overflow-hidden group cursor-zoom-in"
+                >
                   <Image
                     src={room.images[0]}
                     alt={t(room.titleKey)}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                </div>
+                </button>
                 {room.images.slice(1).map((src, i) => (
-                  <div key={i} className="relative aspect-square rounded-lg overflow-hidden">
+                  <button
+                    type="button"
+                    key={i}
+                    onClick={() => openLightbox(room.images, t(room.titleKey), i + 1)}
+                    className="relative aspect-square rounded-lg overflow-hidden group cursor-zoom-in"
+                  >
                     <Image
                       src={src}
                       alt={t(room.titleKey)}
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                  </div>
+                  </button>
                 ))}
               </div>
 
@@ -102,6 +118,15 @@ export default function Spaces() {
           </Link>
         </div>
       </div>
+
+      {lightbox && (
+        <PhotoLightbox
+          images={lightbox.images}
+          index={lightbox.index}
+          onClose={() => setLightbox(null)}
+          onIndexChange={(index) => setLightbox((prev) => (prev ? { ...prev, index } : prev))}
+        />
+      )}
     </section>
   );
 }

@@ -1,9 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../../src/i18n/navigation';
 import { Navigation, TrainFront, Plane, Car } from 'lucide-react';
 import Image from 'next/image';
+import PhotoLightbox, { type LightboxImage } from './PhotoLightbox';
 
 const transportItems = [
   { icon: Navigation, textKey: 'TransportRoad' },
@@ -21,6 +23,7 @@ const locationImages = [
 
 export default function Location() {
   const t = useTranslations('Location');
+  const [lightbox, setLightbox] = useState<{ images: LightboxImage[]; index: number } | null>(null);
 
   return (
     <section id="location" className="bg-cream py-20 px-6 md:px-10 lg:px-36">
@@ -42,14 +45,19 @@ export default function Location() {
 
           <div className="grid grid-cols-2 gap-4">
             {locationImages.map((img, index) => (
-              <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+              <button
+                type="button"
+                key={index}
+                onClick={() => setLightbox({ images: locationImages, index })}
+                className="relative aspect-square rounded-lg overflow-hidden group cursor-zoom-in"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -80,6 +88,15 @@ export default function Location() {
           </div>
         </div>
       </div>
+
+      {lightbox && (
+        <PhotoLightbox
+          images={lightbox.images}
+          index={lightbox.index}
+          onClose={() => setLightbox(null)}
+          onIndexChange={(index) => setLightbox((prev) => (prev ? { ...prev, index } : prev))}
+        />
+      )}
     </section>
   );
 }
