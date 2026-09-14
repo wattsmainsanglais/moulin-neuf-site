@@ -24,7 +24,7 @@ const galleryImages = [
   { src: '/images/CMN-cuisine1.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
   { src: '/images/CMN-cuisine2.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
   { src: '/images/CMN-jardin-pagoda-charante.jpg', alt: 'Chambres Moulin Neuf - garden pagoda' },
-  { src: '/images/CMN-charante1.jpg', alt: 'The Charente river' },
+  { src: '/images/CMN-charante1.jpg', alt: 'The Charente river', wide: true },
 ];
 
 export default function Welcome() {
@@ -60,7 +60,7 @@ export default function Welcome() {
               src="/images/CMN-maison-et-jardin.jpg"
               alt="Chambres Moulin Neuf - house and garden"
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              className="object-cover object-left group-hover:scale-105 transition-transform duration-300"
             />
           </button>
         </div>
@@ -108,8 +108,9 @@ export default function Welcome() {
               type="button"
               key={index}
               onClick={() => setLightbox({ images: galleryImages, index })}
-              className={`relative rounded-lg overflow-hidden group cursor-zoom-in ${
-                img.wide ? 'col-span-2 aspect-[2/1]' : 'aspect-square'
+              className={`relative rounded-lg overflow-hidden group cursor-zoom-in ${ img.wide
+                  ? 'col-span-2 aspect-[2/1]'
+                  : 'aspect-square'
               }`}
             >
               <Image

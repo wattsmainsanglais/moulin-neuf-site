@@ -2,9 +2,9 @@
   "Nav": {
     "SiteName": "Chambres Moulin Neuf",
     "Tagline": "CIVRAY • CHARENTE",
-    "Spaces": "Espaces",
+    "Spaces": "Chambres",
     "Location": "Situation",
-    "Contact": "Contact"
+    "Contact": "Réservation"
   },
   "Hero": {
     "Title": "Chambres Moulin Neuf",
@@ -103,10 +103,10 @@
   "Footer": {
     "SiteName": "Chambres Moulin Neuf",
     "Tagline": "CIVRAY • CHARENTE",
-    "Description": "L'hospitalité française authentique au cœur de la campagne charentaise.",
+    "Description": "Une hospitalité anglo-franco-allemande authentique au cœur de la campagne charentaise.",
     "ContactTitle": "Contact",
     "Address": "4 Rue du Moulin Neuf\n86400 Civray, France",
-    "Email": "reservation@chambresmoulnneuf.fr",
+    "Email": "reservation@chambresmoulinneuf.fr",
     "QuickLinksTitle": "Liens Rapides",
     "OurRooms": "Nos Chambres",
     "BookDirect": "Réserver Directement",
