@@ -16,14 +16,14 @@ const amenities = [
 ];
 
 const galleryImages = [
-  { src: '/images/CMN-maison-et-jardin.jpg', alt: 'Chambres Moulin Neuf - house and garden' },
   { src: '/images/CMN-facade-simca1.jpg', alt: 'Chambres Moulin Neuf - facade', wide: true },
+  { src: '/images/CMN-maison-et-jardin.jpg', alt: 'Chambres Moulin Neuf - house and garden' },
+  { src: '/images/CMN-jardin-pagoda-charante.jpg', alt: 'Chambres Moulin Neuf - garden pagoda' },
   { src: '/images/CMN-facade-simca2.jpg', alt: 'Chambres Moulin Neuf - facade', wide: true },
   { src: '/images/CMN-escalier1.jpg', alt: 'Chambres Moulin Neuf - staircase' },
   { src: '/images/CMN-escalier2.jpg', alt: 'Chambres Moulin Neuf - staircase' },
   { src: '/images/CMN-cuisine1.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
   { src: '/images/CMN-cuisine2.jpg', alt: 'Chambres Moulin Neuf - guest kitchen' },
-  { src: '/images/CMN-jardin-pagoda-charante.jpg', alt: 'Chambres Moulin Neuf - garden pagoda' },
   { src: '/images/CMN-charante1.jpg', alt: 'The Charente river', wide: true },
 ];
 

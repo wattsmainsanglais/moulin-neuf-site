@@ -109,11 +109,11 @@
     "Email": "reservation@chambresmoulinneuf.fr",
     "QuickLinksTitle": "Liens Rapides",
     "OurRooms": "Nos Chambres",
-    "BookDirect": "Réserver Directement",
+    "BookDirect": "Réserver",
     "FollowUsTitle": "Suivez-nous",
     "Copyright": "Tous droits réservés.",
     "PrivacyPolicy": "Politique de Confidentialité",
-    "Terms": "Conditions"
+    "Terms": "Mentions Légales"
   },
   "GoogleMap": {
     "NotConfigured": "Emplacement de la carte non configuré",

@@ -139,13 +139,13 @@ export default function Footer() {
             &copy; {currentYear} {t('SiteName')}. {t('Copyright')}
           </p>
           <div className="flex justify-center items-center gap-2 text-sm">
-            <a href="#" className="text-cream hover:underline tracking-tight">
+            <Link href="/privacy-policy" className="text-cream hover:underline tracking-tight">
               {t('PrivacyPolicy')}
-            </a>
+            </Link>
             <span className="text-cream">•</span>
-            <a href="#" className="text-cream hover:underline tracking-tight">
+            <Link href="/mentions-legales" className="text-cream hover:underline tracking-tight">
               {t('Terms')}
-            </a>
+            </Link>
           </div>
         </div>
 

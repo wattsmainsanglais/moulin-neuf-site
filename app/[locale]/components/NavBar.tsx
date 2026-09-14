@@ -32,17 +32,17 @@ export default function NavBar({ locale }: { locale: string }) {
   return (
     <header className="bg-cream border-b border-sage/20">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-20">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-sage rounded-full flex items-center justify-center">
-              <BridgeIcon className="w-5 h-[18px] text-cream" />
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-sage rounded-full flex items-center justify-center flex-shrink-0">
+              <BridgeIcon className="w-4 h-[14px] sm:w-5 sm:h-[18px] text-cream" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-forest tracking-tight leading-7">
+              <h1 className="text-sm sm:text-xl font-bold text-forest tracking-tight leading-4 sm:leading-7 whitespace-nowrap">
                 {t('SiteName')}
               </h1>
-              <p className="text-xs font-light text-sage tracking-tight leading-4">
+              <p className="text-[10px] sm:text-xs font-light text-sage tracking-tight leading-4">
                 {t('Tagline')}
               </p>
             </div>

@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section id="home" className="w-full bg-cream">
       {/* Hero Image - widescreen banner, full graphic (incl. text) must stay visible, never cropped */}
-      <div className="relative w-full max-w-[1920px] mx-auto aspect-[2/1]">
+      <div className="relative w-full max-w-[1920px] mx-auto aspect-[3/2] sm:aspect-[2/1]">
         <Image
           src="/CMN-banner.jpg"
           alt="Chambres Moulin Neuf - Civray"
