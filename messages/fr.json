@@ -40,7 +40,11 @@
     "PontTitle": "Chambre Pont",
     "PontDesc": "Notre chambre double queen size de 20 m², avec salle d'eau privative et vue traversante sur le jardin et vers la rivière et le Grand Pont tout proche.",
     "PontPrice": "À partir de 70€/nuit",
-    "ViewAllSpaces": "Voir les tarifs & Réserver"
+    "ViewAllSpaces": "Voir les tarifs & Réserver",
+    "SustainabilityTitle": "Notre engagement durable",
+    "SustainabilityPara1": "Notre électricité provient d'un fournisseur d'énergie 100 % verte, alimenté par son réseau local de parcs éoliens. Nous recherchons actuellement des solutions durables pour nos autres besoins énergétiques.",
+    "SustainabilityPara2": "Nous mettons à la disposition de nos hôtes des équipements pour recycler les emballages, les déchets alimentaires et les autres déchets produits pendant leur séjour, dans la limite des installations de tri proposées par notre collectivité locale.",
+    "SustainabilityPara3": "Dans la mesure du possible, nous achetons auprès de producteurs et commerces locaux que nous soutenons, et veillons à maintenir une chaîne d'approvisionnement éthique pour l'ensemble de nos achats. Nous n'avons pas recours à des entreprises ou services connus pour pratiquer l'évasion fiscale, la dégradation de l'environnement ou l'exploitation humaine et animale."
   },
   "Location": {
     "AmenitiesTitle": "Commerces et attractions locales",

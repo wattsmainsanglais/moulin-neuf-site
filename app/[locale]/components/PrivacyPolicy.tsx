@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
           {isFr ? 'Politique de confidentialité' : 'Privacy Policy'}
         </h1>
         <p className="text-sm text-ink/60 mb-12">
-          {isFr ? 'Dernière mise à jour : 14 septembre 2026' : 'Last updated: 14 September 2026'}
+          {isFr ? 'Dernière mise à jour : 15 septembre 2026' : 'Last updated: 15 September 2026'}
         </p>
 
         {isFr ? <FrContent /> : <EnContent />}
@@ -113,9 +113,12 @@ function FrContent() {
           Vos données sont conservées le temps nécessaire pour traiter votre demande et organiser
           votre séjour. Si une réservation est confirmée, les informations utiles à la comptabilité
           (nom, dates, montant) peuvent être conservées plus longtemps pour respecter nos
-          obligations légales et comptables. En l&apos;absence de réservation, l&apos;email
-          d&apos;origine n&apos;est pas conservé au-delà de ce qui est nécessaire pour répondre à
-          votre demande.
+          obligations légales et comptables. En l&apos;absence de réservation, nous pouvons
+          conserver votre demande jusqu&apos;à 24 mois, afin de pouvoir vous reconnaître si vous
+          nous recontactez au sujet d&apos;un futur séjour et à des fins d&apos;analyse interne des
+          demandes reçues. Ce traitement repose sur notre intérêt légitime (article 6.1.f du RGPD).
+          Vous pouvez demander la suppression de votre demande à tout moment — voir la section
+          « Vos droits » ci-dessous.
         </p>
       </Section>
 
@@ -231,8 +234,10 @@ function EnContent() {
           Your data is kept for as long as needed to process your enquiry and arrange your stay.
           If a booking is confirmed, information needed for accounting purposes (name, dates,
           amount) may be kept for longer to meet our legal and accounting obligations. If no
-          booking follows, the original enquiry is not kept beyond what&apos;s needed to respond
-          to you.
+          booking follows, we may keep your enquiry for up to 24 months, so we can recognise you
+          if you contact us again about a future stay and for our own internal analysis of
+          enquiries received. This is based on our legitimate interest (GDPR Article 6(1)(f)). You
+          can ask us to delete your enquiry at any time — see &quot;Your rights&quot; below.
         </p>
       </Section>
 

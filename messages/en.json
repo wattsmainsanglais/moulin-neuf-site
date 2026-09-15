@@ -40,7 +40,11 @@
     "PontTitle": "Chambre Pont",
     "PontDesc": "Our queen sized double room measuring 20 sqm plus private shower room with double-aspect views over the garden and towards the river and nearby Grand Pont.",
     "PontPrice": "From 70€/night",
-    "ViewAllSpaces": "See Rates & Enquire"
+    "ViewAllSpaces": "See Rates & Enquire",
+    "SustainabilityTitle": "Our commitment to sustainability",
+    "SustainabilityPara1": "Our electricity comes from a 100% green energy provider who sources the power from their local network of wind farms. We are currently seeking sustainable solutions for our other energy needs.",
+    "SustainabilityPara2": "We provide facilities for guests to recycle packaging, food or other waste produced during their visit within the limits of the municipal recycling facilities provided by our local authority.",
+    "SustainabilityPara3": "Wherever possible we buy from and support local producers and businesses and seek to maintain an ethical supply chain for all our purchases. We do not use businesses or services that are knowingly engaging in tax avoidance, environmental degradation or human and animal exploitation."
   },
   "Location": {
     "AmenitiesTitle": "Local amenities & attractions",

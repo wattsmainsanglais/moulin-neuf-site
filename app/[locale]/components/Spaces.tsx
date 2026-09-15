@@ -117,6 +117,18 @@ export default function Spaces() {
             {t('ViewAllSpaces')}
           </Link>
         </div>
+
+        {/* Sustainability Statement */}
+        <div className="max-w-[720px] mx-auto mt-12 pt-10 border-t border-sage/20">
+          <h3 className="text-lg font-semibold text-forest tracking-tight mb-3 text-center">
+            {t('SustainabilityTitle')}
+          </h3>
+          <div className="space-y-3 text-sm text-ink/70 leading-relaxed tracking-tight">
+            <p>{t('SustainabilityPara1')}</p>
+            <p>{t('SustainabilityPara2')}</p>
+            <p>{t('SustainabilityPara3')}</p>
+          </div>
+        </div>
       </div>
 
       {lightbox && (

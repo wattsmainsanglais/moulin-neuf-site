@@ -22,7 +22,10 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Chambres Moulin Neuf | Chambre d'Hôtes à Civray, Charente",
-  description: "Chambres d'hôtes de charme à Civray, Charente. Séjour, studio indépendant, galerie et boutique. Découvrez l'hospitalité française au cœur de la campagne charentaise.",
+  description: "Chambres d'hôtes de charme à Civray, Charente. Découvrez l'hospitalité française au cœur de la campagne charentaise.",
+  other: {
+    google: "notranslate",
+  },
 };
 
 export type LayoutProps = {
@@ -48,7 +51,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} translate="no">
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
       >

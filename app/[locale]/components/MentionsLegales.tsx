@@ -39,8 +39,8 @@ function FrContent() {
   return (
     <>
       <p className="text-sm italic text-ink/60 border border-sage/30 rounded-md px-4 py-3 mb-10">
-        Certaines informations ci-dessous restent à confirmer par l&apos;exploitant du site
-        (statut juridique et numéro SIRET) — voir la note en fin de page.
+        Une information ci-dessous reste à confirmer par l&apos;exploitant du site (numéro
+        SIRET) — voir la note en fin de page.
       </p>
 
       <Section title="Site">
@@ -49,8 +49,8 @@ function FrContent() {
 
       <Section title="Éditeur">
         <p>
-          Clive Gross{' '}
-          <span className="text-ink/50">[statut juridique et n° SIRET à confirmer]</span>
+          Clive Gross, Entreprise Individuelle (EI){' '}
+          <span className="text-ink/50">[n° SIRET à confirmer]</span>
           <br />
           4 Rue du Moulin Neuf, 86400 Civray, France
           <br />
@@ -124,8 +124,8 @@ function EnContent() {
     <>
       <p className="text-sm italic text-ink/60 border border-sage/30 rounded-md px-4 py-3 mb-10">
         This legal notice is required by French law and the French version is the definitive one.
-        An English translation is provided below for convenience. Some details still need
-        confirming with the site operator (legal status and SIRET number) — see the note below.
+        An English translation is provided below for convenience. One detail still needs
+        confirming with the site operator (SIRET number) — see the note below.
       </p>
 
       <Section title="Site">
@@ -134,7 +134,7 @@ function EnContent() {
 
       <Section title="Publisher">
         <p>
-          Clive Gross <span className="text-ink/50">[legal status and SIRET number to be confirmed]</span>
+          Clive Gross, Entreprise Individuelle (EI, sole trader) <span className="text-ink/50">[SIRET number to be confirmed]</span>
           <br />
           4 Rue du Moulin Neuf, 86400 Civray, France
           <br />

@@ -10,7 +10,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
   const currentRoute = pathname.slice(3); // Remove /en or /fr
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 notranslate" translate="no">
       <Link
         href={`/en${currentRoute}`}
         className={`text-sm font-medium tracking-tight transition-colors ${
