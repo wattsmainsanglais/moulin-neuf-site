@@ -37,6 +37,7 @@
   --color-accent: var(--forest-green);
   --font-sans: var(--font-lato);
   --font-serif: var(--font-playfair);
+  --font-heading: var(--font-jost);
 
   /* Add custom breakpoint */
   --breakpoint-lg: 1025px;
@@ -49,9 +50,9 @@ body {
   line-height: 1.6;
 }
 
-/* Headings use Playfair Display */
+/* Headings use Century Gothic where installed, Jost as the free web fallback */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), 'Playfair Display', serif;
+  font-family: 'Century Gothic', var(--font-heading), 'Jost', sans-serif;
 }
 
 /* Smooth scrolling */

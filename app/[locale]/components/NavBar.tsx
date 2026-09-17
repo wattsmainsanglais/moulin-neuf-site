@@ -4,16 +4,8 @@ import { Link } from '../../../src/i18n/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
-
-// Bridge icon SVG component
-function BridgeIcon({ className = "w-5 h-[18px]" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.125 1.125C0.502734 1.125 0 1.62773 0 2.25C0 2.87227 0.502734 3.375 1.125 3.375H2.53125V5.625H0V10.125C1.86328 10.125 3.375 11.6367 3.375 13.5V15.75C3.375 16.3723 3.87773 16.875 4.5 16.875H5.625C6.24727 16.875 6.75 16.3723 6.75 15.75V13.5C6.75 11.6367 8.26172 10.125 10.125 10.125C11.9883 10.125 13.5 11.6367 13.5 13.5V15.75C13.5 16.3723 14.0027 16.875 14.625 16.875H15.75C16.3723 16.875 16.875 16.3723 16.875 15.75V13.5C16.875 11.6367 18.3867 10.125 20.25 10.125V5.625H17.7188V3.375H19.125C19.7473 3.375 20.25 2.87227 20.25 2.25C20.25 1.62773 19.7473 1.125 19.125 1.125H1.125ZM16.0312 3.375V5.625H13.2188V3.375H16.0312ZM11.5312 3.375V5.625H8.71875V3.375H11.5312ZM7.03125 3.375V5.625H4.21875V3.375H7.03125Z" fill="currentColor"/>
-    </svg>
-  );
-}
 
 export default function NavBar({ locale }: { locale: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,8 +27,14 @@ export default function NavBar({ locale }: { locale: string }) {
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-sage rounded-full flex items-center justify-center flex-shrink-0">
-              <BridgeIcon className="w-4 h-[14px] sm:w-5 sm:h-[18px] text-cream" />
+            <div className="relative w-9 h-9 sm:w-12 sm:h-12 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/round-logo-icon.png"
+                alt={t('SiteName')}
+                fill
+                sizes="(min-width: 640px) 48px, 36px"
+                className="object-cover"
+              />
             </div>
             <div>
               <h1 className="text-sm sm:text-xl font-bold text-forest tracking-tight leading-4 sm:leading-7 whitespace-nowrap">

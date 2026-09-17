@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Lato, Jost } from "next/font/google";
 import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
@@ -18,6 +18,12 @@ const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   weight: ["300", "400", "700"],
+});
+
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -53,7 +59,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} translate="no">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased`}
+        className={`${playfair.variable} ${lato.variable} ${jost.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <NavBar locale={locale} />

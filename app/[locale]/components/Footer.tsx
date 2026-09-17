@@ -3,16 +3,8 @@
 import { Link } from '../../../src/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { MapPin, Mail } from 'lucide-react';
+import Image from 'next/image';
 import AwattsdevFooter from './AwattsdevFooter';
-
-// Bridge icon for footer
-function BridgeIcon() {
-  return (
-    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1C0.446875 1 0 1.44687 0 2C0 2.55313 0.446875 3 1 3H2.25V5H0V9C1.65625 9 3 10.3438 3 12V14C3 14.5531 3.44687 15 4 15H5C5.55313 15 6 14.5531 6 14V12C6 10.3438 7.34375 9 9 9C10.6562 9 12 10.3438 12 12V14C12 14.5531 12.4469 15 13 15H14C14.5531 15 15 14.5531 15 14V12C15 10.3438 16.3438 9 18 9V5H15.75V3H17C17.5531 3 18 2.55313 18 2C18 1.44687 17.5531 1 17 1H1ZM14.25 3V5H11.75V3H14.25ZM10.25 3V5H7.75V3H10.25ZM6.25 3V5H3.75V3H6.25Z" fill="currentColor"/>
-    </svg>
-  );
-}
 
 // Social icons
 function FacebookIcon() {
@@ -48,8 +40,14 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-cream/20 text-cream rounded-full flex items-center justify-center">
-                <BridgeIcon />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src="/round-logo-icon.png"
+                  alt={t('SiteName')}
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-cream leading-7 tracking-tight">
