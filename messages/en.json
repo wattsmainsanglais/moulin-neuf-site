@@ -46,6 +46,15 @@
     "SustainabilityPara2": "We provide facilities for guests to recycle packaging, food or other waste produced during their visit within the limits of the municipal recycling facilities provided by our local authority.",
     "SustainabilityPara3": "Wherever possible we buy from and support local producers and businesses and seek to maintain an ethical supply chain for all our purchases. We do not use businesses or services that are knowingly engaging in tax avoidance, environmental degradation or human and animal exploitation."
   },
+  "VideoTour": {
+    "Title": "Video Tour",
+    "Description": "Take a look around the rooms and guest spaces before you visit.",
+    "MoulinTitle": "Chambre Moulin walk-through",
+    "PontTitle": "Chambre Pont walk-through",
+    "DiningTitle": "Dining Room & Guest Kitchen",
+    "Play": "Play video",
+    "PrivacyNote": "Videos are hosted on YouTube and only load when you press play."
+  },
   "Location": {
     "AmenitiesTitle": "Local amenities & attractions",
     "AmenitiesPara1": "Civray offers everything for your daily needs.",
